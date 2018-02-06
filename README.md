@@ -35,23 +35,42 @@ github "nodes-ios/Spinner" ~> 2.0
 
 ## 💻 Usage
 
+### Global Settings
+
+SpinnerView has global properties that can be set for convinience to ensure that all spinners look the same. Call these at app launch if needed.
+
+```swift
+SpinnerView.spinnerColor = .red
+SpinnerView.style = .white
+SpinnerView.dimViewBackgroundColor = .black
+```
+
 ### Standard spinner
 Easily present spinners in views like so:
 
 ```swift
-let spinner = SpinnerView.showSpinner(inView: view)
+class ViewController: UIViewController {
+  
+     private let spinner = SpinnerView()
+    
+     override func viewDidLoad() {
+        super.viewDidLoad()
+       
+        spinner.show(in: view)
+    }
+}
 ```
 
-Spinner also gives you the option to customise the UIActivityIndicator Style, color and whether it should disable user interaction of the passed view. These optional parameters will be set as the following if not set.
+Spinner also gives you the option to customise the UIActivityIndicator Style, color and dimView backgroundColor for each individual spinner instance. These will override any Global settings.
 
 ```swift
-public static func showSpinner(inView view: UIView, style: UIActivityIndicatorViewStyle = .white, color:UIColor? = nil, disablesUserInteraction: Bool = true, dimBackground: Bool = false) -> SpinnerView
+let spinner = SpinnerView(style: .white, color: .red, dimViewBackgroundColor: .black)
 ```
 
 Example of adding it to a view.
 
 ```swift
-let spinner = SpinnerView.showSpinner(inView: view, style: UIActivityIndicatorViewStyle.white, color: UIColor.red, disablesUserInteraction: false, dimBackground: true)
+spinner.show(in: view, disablesUserInteraction: false, dimBackground: true)
 ```
 
 To remove the spinner from your view simply call dismiss.
@@ -63,17 +82,25 @@ spinner.dismiss()
 ### Custom spinner
 If you would rather use something more custom than the UIActivityIndicator, you can set an array of images to the Spinner with a duration time it takes to animate through them and display it in a view.
 
-```swift
-public static func set(customImages images: [UIImage], duration: TimeInterval)
+First setup SpinnerView with your array of images e.g. AppDelegate
 
-public static func showCustomSpinner(inView view: UIView, dimBackground: Bool = false) -> SpinnerView
+```swift
+let imagesArray = [...]
+SpinnerView.set(withCustomImages: imagesArray, duration: 2)
+```
+
+and than simply call the custom show method
+
+```swif
+spinner.showCustom(in: view, disablesUserInteraction: false, dimBackground: true)
 ```
 
 ### Buttons
 You can also display the spinner in buttons, simply add the spinner to any UIButton and the spinner will hide the title in the button and display the spinner in the centre of the button. Once the spinner is dismissed, the title will be made visible once more.
 
 ```swift
-public static func showCustomSpinner(inButton button: UIButton, disablesUserInteraction:Bool = true) -> SpinnerView
+spinner.show(in: button, disablesUserInteraction: false)
+spinner.showCustom(in: button, disablesUserInteraction: false)
 ```
 
 ## Credits

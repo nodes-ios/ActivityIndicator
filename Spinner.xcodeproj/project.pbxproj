@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		275BCA2D1C57C50A00FF3647 /* Spinner.h in Headers */ = {isa = PBXBuildFile; fileRef = 275BCA2C1C57C50A00FF3647 /* Spinner.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		275BCA441C57C56900FF3647 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BCA431C57C56900FF3647 /* Spinner.swift */; };
+		275BCA441C57C56900FF3647 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BCA431C57C56900FF3647 /* SpinnerView.swift */; };
 		BD9ABA651D9D4A740013E462 /* SpinnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9ABA641D9D4A740013E462 /* SpinnerTests.swift */; };
 		BD9ABA671D9D4A740013E462 /* Spinner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275BCA291C57C50A00FF3647 /* Spinner.framework */; };
 		E3FC3F5C1DA2584E00CEF414 /* Spinner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3FC3F531DA2584E00CEF414 /* Spinner.framework */; };
 		E3FC3F611DA2584E00CEF414 /* Spinner_tvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FC3F601DA2584E00CEF414 /* Spinner_tvOSTests.swift */; };
 		E3FC3F631DA2584E00CEF414 /* Spinner-tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E3FC3F551DA2584E00CEF414 /* Spinner-tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E3FC3F6A1DA2586800CEF414 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BCA431C57C56900FF3647 /* Spinner.swift */; };
+		E3FC3F6A1DA2586800CEF414 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BCA431C57C56900FF3647 /* SpinnerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,7 @@
 		275BCA291C57C50A00FF3647 /* Spinner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spinner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		275BCA2C1C57C50A00FF3647 /* Spinner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spinner.h; sourceTree = "<group>"; };
 		275BCA2E1C57C50A00FF3647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		275BCA431C57C56900FF3647 /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		275BCA431C57C56900FF3647 /* SpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		BD9ABA621D9D4A740013E462 /* SpinnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpinnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9ABA641D9D4A740013E462 /* SpinnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerTests.swift; sourceTree = "<group>"; };
 		BD9ABA661D9D4A740013E462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		275BCA2B1C57C50A00FF3647 /* Spinner */ = {
 			isa = PBXGroup;
 			children = (
-				275BCA431C57C56900FF3647 /* Spinner.swift */,
+				275BCA431C57C56900FF3647 /* SpinnerView.swift */,
 				275BCA2C1C57C50A00FF3647 /* Spinner.h */,
 				275BCA2E1C57C50A00FF3647 /* Info.plist */,
 			);
@@ -325,7 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				275BCA441C57C56900FF3647 /* Spinner.swift in Sources */,
+				275BCA441C57C56900FF3647 /* SpinnerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3FC3F6A1DA2586800CEF414 /* Spinner.swift in Sources */,
+				E3FC3F6A1DA2586800CEF414 /* SpinnerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,7 +490,7 @@
 				PRODUCT_NAME = Spinner;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -511,7 +511,7 @@
 				PRODUCT_NAME = Spinner;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
